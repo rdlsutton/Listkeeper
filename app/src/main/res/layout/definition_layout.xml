@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textLayoutListName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorHint"
+        android:background="@color/colorPrimary">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextListName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/edit_text_underline_primary"
+            android:inputType="textNoSuggestions"
+            android:maxLength="35"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:imeOptions="actionDone"
+            android:hint="@string/new_list_name"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFields"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorWhite"/>
+
+    <LinearLayout
+        android:id="@+id/progressBarLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:theme="@style/progressBarColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonAddField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:text="@string/add_field"/>
+
+</LinearLayout>

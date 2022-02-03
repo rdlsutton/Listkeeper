@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textLayoutFieldName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:textColorHint="@color/colorHint"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextFieldName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_underline_white"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            android:maxLength="35"
+            android:imeOptions="actionDone"
+            android:hint="@string/field_name"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textViewFieldTypeLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        android:text="@string/field_type"
+        app:layout_constraintTop_toBottomOf="@+id/textLayoutFieldName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewFieldSortingLabel"/>
+
+    <RadioGroup
+        android:id="@+id/radioFieldType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFieldTypeLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/radioSorting">
+
+        <RadioButton
+            android:id="@+id/radioDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:theme="@style/Theme.RadioButton"
+            android:text="@string/type_date"/>
+
+        <RadioButton
+            android:id="@+id/radioEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:theme="@style/Theme.RadioButton"
+            android:text="@string/type_email"/>
+
+        <RadioButton
+            android:id="@+id/radioNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:theme="@style/Theme.RadioButton"
+            android:text="@string/type_number"/>
+
+        <RadioButton
+            android:id="@+id/radioPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:theme="@style/Theme.RadioButton"
+            android:text="@string/type_phone"/>
+
+        <RadioButton
+            android:id="@+id/radioPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:theme="@style/Theme.RadioButton"
+            android:text="@string/type_photo"/>
+
+        <RadioButton
+            android:id="@+id/radioText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:theme="@style/Theme.RadioButton"
+            android:text="@string/type_text"/>
+
+        <RadioButton
+            android:id="@+id/radioTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:theme="@style/Theme.RadioButton"
+            android:text="@string/type_time"/>
+
+        <RadioButton
+            android:id="@+id/radioURL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:theme="@style/Theme.RadioButton"
+            android:text="@string/type_url"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewFieldSortingLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        android:text="@string/field_sorting"
+        app:layout_constraintTop_toBottomOf="@+id/textLayoutFieldName"
+        app:layout_constraintStart_toEndOf="@+id/textViewFieldTypeLabel"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/radioSorting"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFieldSortingLabel"
+        app:layout_constraintStart_toEndOf="@+id/radioFieldType"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioOff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:theme="@style/Theme.RadioButton"
+            android:text="@string/off"/>
+
+        <RadioButton
+            android:id="@+id/radioAscending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:theme="@style/Theme.RadioButton"
+            android:text="@string/ascending"/>
+
+        <RadioButton
+            android:id="@+id/radioDescending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:theme="@style/Theme.RadioButton"
+            android:text="@string/descending"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewFieldOrderLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        android:text="@string/field_order"
+        app:layout_constraintTop_toBottomOf="@+id/radioSorting"
+        app:layout_constraintStart_toEndOf="@+id/radioFieldType"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <NumberPicker
+        android:id="@+id/pickerFieldOrder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:theme="@style/PickerText"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFieldOrderLabel"
+        app:layout_constraintStart_toEndOf="@+id/radioFieldType"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

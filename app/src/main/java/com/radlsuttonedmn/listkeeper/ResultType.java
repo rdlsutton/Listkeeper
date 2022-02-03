@@ -1,0 +1,11 @@
+package com.radlsuttonedmn.listkeeper;
+
+/**
+ * Enumeration of the available result types
+ */
+
+public enum ResultType {
+    DATA_FAIL, DECRYPT_FAIL, DUPLICATE_ITEM, DUPLICATE_TABLE, ENCRYPT_FAIL, ENCRYPT_PHOTO, FIELD_CHANGE, INVALID_DATE,
+    INVALID_NUMBER, INVALID_PHONE, INVALID_TIME, ITEM_SAVED, ITEM_UPDATED, NO_CHANGE, NO_DATA, NO_FIELDS,
+    STORE_ERROR, VALID
+}

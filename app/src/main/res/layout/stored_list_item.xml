@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:id="@+id/textViewItemMain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
+        android:paddingRight="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="5dp"
+        android:gravity="start"
+        android:background="@color/colorWhite"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imagePhoto"/>
+
+    <TextView
+        android:id="@+id/textViewItemMore"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="50dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="8dp"
+        android:singleLine="false"
+        android:gravity="start"
+        android:background="@color/colorWhite"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewItemMain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imagePhoto"/>
+
+    <ImageView
+        android:id="@+id/imagePhoto"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginEnd="30dp"
+        app:srcCompat="@drawable/photo_icon"
+        android:background="@color/colorWhite"
+        android:contentDescription="@string/photo"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewItemMain"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
